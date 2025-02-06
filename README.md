@@ -61,18 +61,6 @@ docker build -t rag_project .
 docker run -e OPENAI_API_KEY=your_api_key_here -p 8501:8501 rag_project
 ```
 The app will be accessible.
-
-### **3️⃣ Share the Docker Image**
-To share with others, save the image as a `.tar` file:
-```bash
-docker save -o rag_project.tar rag_project
-```
-Then, send `rag_project.tar` . They can **load and run it** using:
-```bash
-docker load -i rag_project.tar
-docker run -p 8501:8501 rag_project
-```
-
 ---
 ##  How to Use
 1. **Upload PDF files** via the sidebar 📂
