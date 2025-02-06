@@ -55,7 +55,7 @@ if existing_pdfs:
     for pdf in existing_pdfs:
         st.sidebar.write(f"✅ {pdf}")
 
-# 📌 Process PDFs & Generate Embeddings
+#  Process PDFs & Generate Embeddings
 if st.sidebar.button("📖 Process PDFs & Generate Embeddings"):
     if existing_pdfs:
         st.sidebar.info("🔄 Processing PDFs...")
