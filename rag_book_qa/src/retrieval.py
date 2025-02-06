@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # Load the SentenceTransformer model
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-def retrieve_relevant_chunks(query, index, metadata, k=10):
+def retrieve_relevant_chunks(query, index, metadata, k=20):
     """Retrieves the most relevant text chunks for a given query."""
     query_embedding = model.encode([query], convert_to_numpy=True)
 

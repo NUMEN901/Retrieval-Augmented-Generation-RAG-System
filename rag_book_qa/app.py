@@ -16,8 +16,12 @@ from src.gpt_answer import generate_gpt_answer
 # Load environment variables
 load_dotenv()
 
-print("DEBUG: OpenAI API Key:", os.getenv("OPENAI_API_KEY"))  
+api_key = os.getenv("OPENAI_API_KEY")
 
+if not api_key:
+    raise ValueError("❌ OPENAI_API_KEY is not set! Please check your .env file or environment variables.")
+
+print(f"✅ Loaded OpenAI API Key: {api_key[:5]}*****")  # ✅ Debugging
 
 
 # Define folders
@@ -29,7 +33,7 @@ os.makedirs("embeddings", exist_ok=True)
 
 st.title("📚 PDF Knowledge Assistant")
 
-# 📌 Sidebar: PDF Upload
+# Sidebar: PDF Upload
 st.sidebar.header("📂 Upload Your PDFs")
 uploaded_files = st.sidebar.file_uploader("Upload PDF files", type="pdf", accept_multiple_files=True)
 

@@ -1,0 +1,26 @@
+# Core Dependencies
+streamlit
+openai
+faiss-cpu
+sentence-transformers
+langchain
+python-dotenv
+PyMuPDF
+
+# Data Processing
+numpy
+pandas
+scikit-learn
+tqdm
+
+# Web Framework
+fastapi
+uvicorn
+
+# HTTP Requests
+requests
+httpx
+
+# JSON Handling
+pydantic
+orjson

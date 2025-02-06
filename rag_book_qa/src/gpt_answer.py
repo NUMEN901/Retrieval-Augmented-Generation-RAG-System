@@ -40,7 +40,7 @@ def generate_gpt_answer(query, retrieved_texts):
     """
 
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-4-turbo",
         messages=[{"role": "system", "content": "You are an AI that synthesizes information from multiple sources."},
                   {"role": "user", "content": prompt}],
         max_tokens=50  # Limit response length

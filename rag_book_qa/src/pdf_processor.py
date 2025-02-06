@@ -30,7 +30,7 @@ def process_pdfs():
         full_text = " ".join([page["content"] for page in extracted_text])
 
         text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=1600, chunk_overlap=500, separators=["\n\n", "\n", " ", ""]
+            chunk_size=2000, chunk_overlap=500, separators=["\n\n", "\n", " ", ""]
         )
         chunks = text_splitter.split_text(full_text)
 
