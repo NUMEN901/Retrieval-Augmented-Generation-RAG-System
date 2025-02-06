@@ -1,19 +1,19 @@
 # 📚 Retrieval-Augmented Generation (RAG) PDF Assistant
 
-## 📝 Project Overview
+##  Project Overview
 This project is a **Retrieval-Augmented Generation (RAG) system** designed to extract knowledge from **multiple PDF books** and provide accurate answers based on their content. It uses **FAISS for semantic search** and **OpenAI's GPT model** for generating responses.
 
-## 🚀 Features
+##  Features
 - Upload multiple PDF books 📂
 - Process and extract text from PDFs 📄
-- Generate embeddings and store them in **FAISS Index** 🏛️
-- Perform **semantic search** to retrieve relevant text 🔍
-- Use **GPT model** to generate human-like answers 🤖
+- Generate embeddings and store them in **FAISS Index** 
+- Perform **semantic search** to retrieve relevant text 
+- Use **GPT model** to generate human-like answers 
 - Display the **source book and page number** for traceability 📖
-- **Dockerized deployment** for easy execution 🐳
+- **Dockerized deployment** for easy execution 
 
 ---
-## 📌 Project Workflow
+##  Project Workflow
 ![Project Workflow](diagram.jpg)
 
 ### **How It Works**
@@ -27,7 +27,7 @@ This project is a **Retrieval-Augmented Generation (RAG) system** designed to ex
 8. **Displaying Results**: The final answer includes **the source book and page number** for context.
 
 ---
-## 🛠️ Installation & Setup
+##  Installation & Setup
 ### **Option 1: Run Locally**
 
 ### **1️⃣ Install Dependencies**
@@ -46,10 +46,10 @@ OPENAI_API_KEY=your_api_key_here
 ```bash
 streamlit run app.py
 ```
-The app will start at: **http://localhost:8501** 🎉
+The app will start.
 
 ---
-## 🐳 Option 2: Run with Docker (Recommended)
+##  Option 2: Run with Docker
 
 ### **1️⃣ Build the Docker Image**
 ```bash
@@ -60,21 +60,21 @@ docker build -t rag_project .
 ```bash
 docker run -e OPENAI_API_KEY=your_api_key_here -p 8501:8501 rag_project
 ```
-The app will be accessible at: **http://localhost:8501**
+The app will be accessible.
 
 ### **3️⃣ Share the Docker Image**
 To share with others, save the image as a `.tar` file:
 ```bash
 docker save -o rag_project.tar rag_project
 ```
-Then, send `rag_project.tar` to your supervisor. They can **load and run it** using:
+Then, send `rag_project.tar` . They can **load and run it** using:
 ```bash
 docker load -i rag_project.tar
 docker run -p 8501:8501 rag_project
 ```
 
 ---
-## 📖 How to Use
+##  How to Use
 1. **Upload PDF files** via the sidebar 📂
 2. Click **Process PDFs & Generate Embeddings** to extract content 🔄
 3. Choose **books** to search from 📚
@@ -102,6 +102,5 @@ PyMuPDF
 - **OpenAI GPT** for intelligent responses
 
 ---
-## 📬 Contact
-For any issues, feel free to create an issue or contact me.
+
 
